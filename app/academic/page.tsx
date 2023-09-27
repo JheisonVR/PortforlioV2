@@ -92,7 +92,9 @@ const academicBackground : AcademicProps[] = [{
 
 const page = () => {
   return (
-    <div>
+    <div
+        className=' flex w-full  '
+    >
 
         {academicBackground.map(( academic, i )=> ( 
             <CardAcademic
