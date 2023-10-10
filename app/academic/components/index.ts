@@ -1,2 +1,2 @@
 export * from './CardAcademic'
-export * from './Carrousel'
+export * from './Carousel'
