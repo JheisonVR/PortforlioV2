@@ -25,3 +25,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Apply */
+/* .btnTest{
+  @apply px-7 py-2 rounded-lg font-bold
+} */
+
+/* Layer */
+
+ @layer components{
+  .btnTest{
+    @apply px-7 py-2 rounded-lg font-bold
+  }
+ }
