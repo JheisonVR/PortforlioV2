@@ -9,8 +9,8 @@ const Navbar = () => {
       </div>
       <div className="flex justify-around  w-1/2 " >
         <Link href="skills" className="">Skills</Link>
-        <Link href="" >Projects </Link>
-        <Link href="" >Academic</Link>
+        <Link href="/projects" >Projects </Link>
+        <Link href="/academic" >Academic</Link>
         <Link href="" >Work Background</Link>
       </div>
     </nav>
