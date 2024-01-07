@@ -3,7 +3,9 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className=" flex justify-between bg-gradient-to-l from-emerald-50 via-teal-100 via-cyan-100 via-sky-50 to-zinc-50 mx-auto w-full border " >
+    // <nav className=" flex justify-between bg-gradient-to-l from-emerald-800 to-[#007670] mb-2 w-full text-white  " >
+    
+    <nav className=" flex justify-between bg-transparent mb-2 w-full text-white  " >
       <div className="ml-1" >
         <Link href='/' className="" >Jheison Vargas</Link>
       </div>
@@ -11,7 +13,7 @@ const Navbar = () => {
         <Link href="skills" className="">Skills</Link>
         <Link href="/projects" >Projects </Link>
         <Link href="/academic" >Academic</Link>
-        <Link href="" >Work Background</Link>
+        <Link href="/workBackground" >Work Background</Link>
       </div>
     </nav>
   );

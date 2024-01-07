@@ -1,124 +1,96 @@
-import Image from 'next/image'
+import Image from "next/image";
+import CarouselHome from "./components/CarouselHome";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-      {/* NavBar & Footer start */}
-      {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex flex-col h-screen items-center p-10 bg-gradient-to-t from-emerald-100 to-[#007670]  ">
+      <div className="h-screen grid sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 xl:grid-cols-12 grid-flow-row-dense w-5/6 sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold font-mono gap-2  ">
+        <div className="flex w-full sm:col-span-full md:col-span-full items-center justify-center mb-5 ">
+          <h1 className="text-slate-100 text-center">
+            Jheyson David Vargas Rayo
+          </h1>
         </div>
-      </div> */}
-      {/* NavBar & Footer End */}
-
-      
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        {/* Image Block */}
+        <div className="sm:col-start-1 sm:col-end-3 md:col-start-1 md:col-end-5 xl:col-start-1 xl:col-end-6 row-start-2 row-end-6 rounded-full overflow-hidden inline-block bg- [#007670] mx-2 my-1">
+          <CarouselHome />
+        </div>
+        {/* Text Block */}
+        <div className="flex flex-col justify-center sm:col-span-full row-start-6 mt-4">
+          <h2 className="text-slate-100 text-center">FullStack Web Developer</h2>
+          <div className="flex justify-center space-x-4 row-start-7 col-span-full">
+            <a
+              href="https://www.linkedin.com/in/jheison-david-vargas-rayo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                className="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M22.225 0h-20.45c-.983 0-1.774.792-1.774 1.775v20.45c0 .983.792 1.775 1.775 1.775h20.45c.983 0 1.775-.792 1.775-1.775v-20.45c0-.983-.792-1.775-1.775-1.775zm-13.35 20.704h-2.871v-11.92h2.871v11.92zm-1.435-13.652c-.92 0-1.671-.754-1.671-1.677 0-.922.751-1.676 1.671-1.676.92 0 1.671.754 1.671 1.676 0 .923-.751 1.677-1.671 1.677zm13.35 13.652h-2.87v-6.441c0-1.564-.031-3.574-2.17-3.574-2.172 0-2.504 1.7-2.504 3.461v6.554h-2.871v-11.92h2.757v1.63h.039c.384-.724 1.321-1.488 2.717-1.488 2.901 0 3.432 1.91 3.432 4.398v7.38z"></path>
+              </svg>
+            </a>
+            <a
+              href="https://github.com/JheisonVR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                className="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6 .113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.08-.729.08-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.304 3.495 1 .103-.775.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.77.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.6-.015 2.885-.015 3.285 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        {/* Buttons */}
+        <div>
+          <div className="flex sm:col-start-3 sm:row-start-4 sm:h-20 col-span-1 text-base ">
+            <button className="bg-green-500 w-full hover:bg-green-700 text-white font-bold py-2 px-4 transition duration-1000   rounded-full">
+              Projects
+            </button>
+          </div>
+          <div className="flex sm:col-start-4 sm:row-start-4 sm:h-20 col-span-1 transition duration-1000 text-base">
+            <button className="bg-green-600 hover:bg-green-800 w-full transition duration-1000  text-white font-bold py-2 px-4 rounded-full">
+              Resume
+            </button>
+          </div>
+          <div className="flex  sm:col-start-3 row-start-5 sm:h-20 col-span-2 hover:col-span-1 transition duration-1000 text-base">
+            <button className="bg-green-700 hover:bg-green-900 w-full transition duration-1000  text-white font-bold py-2 px-4 rounded-full">
+              Contact
+            </button>
+          </div>
+        </div>
+        {/* Text List */}
+        <div className="sm:col-start-3 sm:row-start-2 sm:row-span-2 col-span-2  text-base font-mono text-slate-100 ">
+          <ul>
+            <li>
+              <span className="inline-block h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+              Frontend Developer
+            </li>
+            <li>
+              <span className="inline-block h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+              Backend Developer
+            </li>
+            <li>
+              <span className="inline-block h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+              Salesforce Developer
+            </li>
+            <li>
+              <span className="inline-block h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+              Salesforce Administrator
+            </li>
+            <li>
+              <span className="inline-block h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+              Public Administrator
+            </li>
+          </ul>
+        </div>
       </div>
 
-      {/* Cards Start */}
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        {/* Cards Docs Start */}
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-        {/* Cards Docs End */}
-        {/* Cards Learn Start */}
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-        {/* Cards Learn End */}
-        {/* Cards Template Start */}
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-        {/* Cards Template End */}
-        {/* Cards Deploy Start */}
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-        {/* Cards Deploy End */}
-      </div>
-      {/* Cards End */}
     </main>
-  )
+  );
 }
