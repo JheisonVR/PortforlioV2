@@ -1,5 +1,43 @@
 import Image from "next/image";
 import CarouselHome from "./components/CarouselHome";
+import Link from "next/link";
+
+export const profesionTags = [
+  {
+    name:"Salesforce Developer",
+  },
+  {
+    name:"Salesforce Administrator",
+  },
+  {
+    name:"Frontend Developer",
+  },
+  {
+    name:"Backend Developer",
+  },
+  {
+    name:"Public Administrator",
+  },
+]
+
+export const buttonshome = [
+  {
+    name:"Projects",
+    style:"bg-[#258D84] hover:bg-green-700 w-full transition text-white font-bold py-2 px-4 rounded-full",
+    ref:"/projects",
+  },
+  {
+    name:"Resume",
+    style:"bg-[#258D84] hover:bg-green-700 w-full transition  text-white font-bold py-2 px-4 rounded-full",
+    ref:"/resume",
+  },
+  {
+    name:"Contact",
+    style:"bg-[#258D84] hover:bg-green-700 w-full transition text-white font-bold py-2 px-4 rounded-full",
+    ref:"/contact",
+  },
+
+]
 
 export default function Home() {
   return (
@@ -13,7 +51,7 @@ export default function Home() {
             Jheyson David Vargas Rayo
           </h1>
         </div>
-        {/* Image Block */}
+        {/* Carrousel Image Block */}
         <div className="flex flex-col justify-center sm:col-start-1 sm:col-end-4 sm:col-span-2 md:col-start-1 md:col-end-7 lg:col-start-1 lg:col-end-8 xl:col-start-1 xl:col-end-8 sm:row-start-2 sm:row-end-5 md:row-start-2 md:row-end-6 rounded-full overflow-hidden  bg- [#007670] mx-2 my-1">
           <CarouselHome />
         </div>
@@ -21,40 +59,22 @@ export default function Home() {
         {/* Text List */}
         <div className="sm:col-start-4 sm:row-start-3 sm:col-span-2 md:col-start-7 md:col-span-4 lg:col-start-8 lg:col-span-5 xl:col-span-5 md:row-start-3 text-base font-mono text-slate-100 ">
           <ul className="md:text-lg lg:text-xl xl:text-2xl text-justify">
-            <li>
-              <span className="inline-block h-2 w-2 rounded-full bg-[#007670] mr-2"></span>
-              Frontend Developer
-            </li>
-            <li>
-              <span className="inline-block h-2 w-2 rounded-full bg-[#007670] mr-2"></span>
-              Backend Developer
-            </li>
-            <li>
-              <span className="inline-block h-2 w-2 rounded-full bg-[#007670] mr-2"></span>
-              Salesforce Developer
-            </li>
-            <li>
-              <span className="inline-block h-2 w-2 rounded-full bg-[#007670] mr-2"></span>
-              Salesforce Administrator
-            </li>
-            <li>
-              <span className="inline-block h-2 w-2 rounded-full bg-[#007670] mr-2"></span>
-              Public Administrator
-            </li>
+            {profesionTags.map((tag, index) => (
+              <li key={index} >
+                <span className="inline-block h-2 w-2 rounded-full bg-[#007670] mr-2"></span>
+                {tag.name}
+              </li>
+            ))}
           </ul>
         </div>
         
-        {/* Buttons */}
-        <div className="flex flex-col gap-1 sm:col-start-4 sm:col-span-2 sm:row-start-4 md:col-start-7 md:col-span-4 lg:col-start-8 lg:col-span-4 xl:col-span-5 row-start-5 text-xl">          
-          <button className="bg-[#258D84] w-full hover:bg-green-700 text-white font-bold py-2 px-4 transition duration-1000 rounded-full">
-            Projects
-          </button>                
-          <button className="bg-[#217e77] hover:bg-green-800 w-full transition duration-1000  text-white font-bold py-2 px-4 rounded-full">
-            Resume
-          </button>                
-          <button className="bg-[#19655e] hover:bg-green-900 w-full transition duration-1000  text-white font-bold py-2 px-4 rounded-full">
-            Contact
-          </button>          
+        {/* Links */}
+        <div className="flex flex-col gap-1 sm:col-start-4 sm:col-span-2 sm:row-start-4 md:col-start-7 md:col-span-4 lg:col-start-8 lg:col-span-4 xl:col-span-5 row-start-5 text-xl text-center">          
+        {buttonshome.map((link, index) => (
+          // <button key={index} className={button.style}>
+            <Link key={index} className={link.style} href={link.ref}>{link.name}</Link> 
+          // </button>                
+        ))}
         </div>
 
         {/* Footer Block */}
